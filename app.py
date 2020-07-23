@@ -8,7 +8,7 @@ def classifierA():
     if request.method == "POST":
         val = int(request.form.get("nm"))
         out = classifier(val)
-        return render_template("login.html",out="The Predicted Salary Is:"+ str(round(out[0])))
+        return render_template("login.html",out="The Predicted Salary Is:"+ str(int(round(out[0]))))
 
     return render_template("login.html",out="")
 
